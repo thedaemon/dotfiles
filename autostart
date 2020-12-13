@@ -1,6 +1,0 @@
-#OpenBOX autostart
-#Wallpaper
-feh --bg-scale /home/thedaemon/Pictures/Wallpapers/custom1.png
-
-# Panel
-tint2 &
