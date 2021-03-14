@@ -15,7 +15,7 @@
        under the mouse pointer. when followMouse is enabled -->
     <underMouse>no</underMouse>
     <!-- move focus under the mouse, even when the mouse is not moving -->
-    <focusDelay>200</focusDelay>
+    <focusDelay>2000</focusDelay>
     <!-- when followMouse is enabled, the mouse must be inside the window for
        this many milliseconds (1000 = 1 sec) before moving focus to it -->
     <raiseOnFocus>no</raiseOnFocus>
@@ -108,6 +108,7 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
+    <cornerRadius>8</cornerRadius>
   </theme>
   <desktops>
     <!-- this stuff is only used at startup, pagers allow you to change them
@@ -125,7 +126,7 @@
       <name>two</name>
       <name>three</name>
     </names>
-    <popupTime>400</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -317,6 +318,28 @@
         <direction>down</direction>
       </action>
     </keybind>
+    <!--Keybindings for tiling -->
+    <keybind key="W-A-Left">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="ToggleMaximizeFull"/>
+    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
@@ -342,19 +365,21 @@
         </startupnotify>
       </action>
     </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>rofi -show run</command>
+      </action>
+    </keybind>
     <keybind key="W-b">
       <action name="ToggleDecorations">
     </action>
     </keybind>
-      <keybind key="C-A-space">
- <action name="ShowMenu">
-          <menu>root-menu</menu>
-        </action>
+    <keybind key="W-A-space">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
     </keybind>
   </keyboard>
-
-
-
   <mouse>
     <dragThreshold>10</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
@@ -401,7 +426,7 @@
           <to>next</to>
         </action>
       </mousebind>
-      <mousebind button="C-A-Up" action="Click">
+      <mousebind C="button-A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
         </action>
@@ -427,7 +452,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleShade"/>
+        <action name="ToggleMaximizeFull"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
@@ -811,7 +836,7 @@
     -->
     <!-- match all windows, and remove their decorations -->
     <application class="*">
-      <decor>yes</decor>
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
