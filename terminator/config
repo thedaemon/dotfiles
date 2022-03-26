@@ -1,101 +1,114 @@
 [global_config]
-  geometry_hinting = True
-  title_transmit_fg_color = "#2E3440"
-  title_transmit_bg_color = "#88C0D0"
-  title_receive_fg_color = "#2E3440"
-  title_receive_bg_color = "#8FBCBB"
-  title_inactive_fg_color = "#D8DEE9"
-  title_inactive_bg_color = "#4C566A"
-  title_use_system_font = False
-  title_font = MesloLGS NF 9
-  putty_paste_style_source_clipboard = True
+  borderless = True
+  inactive_color_offset = 0.6644295302013423
+  suppress_multiple_term_dialog = True
 [keybindings]
   help = ""
 [profiles]
   [[default]]
-    background_darkness = 0.82
+    icon_bell = False
+    background_color = "#2e3440"
+    background_darkness = 0.9
+    background_type = transparent
     cursor_color = "#aaaaaa"
-    font = MesloLGS NF 10
-    show_titlebar = False
-    scrollback_infinite = True
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
-    use_system_font = False
-    use_theme_colors = True
-    copy_on_selection = True
-  [[nord]]
-    background_darkness = 0.95
-    cursor_blink = False
-    cursor_color = "#D8DEE9"
-    font = MesloLGS NF 10
+    font = Iosevka Term Medium 12
+    foreground_color = "#eceff4"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
-    disable_mousewheel_zoom = True
-    palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
+    palette = "#000000:#bf616a:#a3be8c:#ebcb8b:#5e81ac:#b48ead:#8fbcbb:#d3d7cf:#555753:#d08770:#a3be8c:#ebcb8b:#81a1c1:#ad7fa8:#88c0d0:#eeeeec"
     use_system_font = False
-    use_theme_colors = True
-    copy_on_selection = True
 [layouts]
   [[default]]
-    [[[child0]]]
+    [[[window0]]]
       type = Window
       parent = ""
-      order = 0
-      position = 575:430
-      maximised = False
-      fullscreen = False
-      size = 835, 485
-      title = fish /usr/home/thedaemon
-      last_active_term = 9565ccad-be78-4ce6-a767-4900a2d21f95
-      last_active_window = True
-    [[[terminal1]]]
+    [[[child1]]]
       type = Terminal
-      parent = child0
-      order = 0
-      profile = nord
-      uuid = 9565ccad-be78-4ce6-a767-4900a2d21f95
-  [[3 with music]]
+      parent = window0
+      profile = default
+  [[Stacked]]
     [[[child0]]]
       type = Window
       parent = ""
       order = 0
-      position = 24:24
+      position = 1280:4
       maximised = False
       fullscreen = False
-      size = 1256, 1384
+      size = 1256, 1404
       title = fish /usr/home/thedaemon
-      last_active_term = c3584b7d-2a32-4007-900c-43d85a82febe
+      last_active_term = 0158ae64-b45e-45ff-95d8-4d7c6b6e49ec
       last_active_window = True
     [[[child1]]]
       type = VPaned
       parent = child0
       order = 0
-      position = 690
-      ratio = 0.5003625815808557
+      position = 700
+      ratio = 0.5003573981415297
     [[[terminal2]]]
       type = Terminal
       parent = child1
       order = 0
-      profile = nord
-      uuid = 9565ccad-be78-4ce6-a767-4900a2d21f95
-      command = emacs -nw
-    [[[child3]]]
+      profile = default
+      uuid = 0158ae64-b45e-45ff-95d8-4d7c6b6e49ec
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = c3c41c25-2ab1-4cc1-bfde-5ada0057fdf3
+  [[Quad]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 24:4
+      maximised = True
+      fullscreen = False
+      size = 2512, 1404
+      title = fish /usr/home/thedaemon
+      last_active_term = bf5f8910-d9f5-414a-b45a-e7ca119bdde4
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 700
+      ratio = 0.5003573981415297
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 1254
+      ratio = 0.5
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = 93cff90d-a0ba-4a03-8139-5b98a902f194
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = bf5f8910-d9f5-414a-b45a-e7ca119bdde4
+    [[[child5]]]
       type = HPaned
       parent = child1
       order = 1
-      position = 646
-      ratio = 0.5163868904876099
-    [[[terminal4]]]
+      position = 1254
+      ratio = 0.5
+    [[[terminal6]]]
       type = Terminal
-      parent = child3
+      parent = child5
       order = 0
-      profile = nord
-      uuid = c3584b7d-2a32-4007-900c-43d85a82febe
-    [[[terminal5]]]
+      profile = default
+      uuid = b8e5de65-6e8c-42e8-8269-64ac9975b9ef
+    [[[terminal7]]]
       type = Terminal
-      parent = child3
+      parent = child5
       order = 1
-      profile = nord
-      uuid = 8443ac86-9bbb-41f7-8285-f62e274ad43e
-      command = cmus
+      profile = default
+      uuid = 80b87a33-842c-4045-9506-24204df6ab8a
 [plugins]
