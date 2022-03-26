@@ -1,14 +1,13 @@
-#OpenBOX autostart
+# OpenBOX AutoStart
 
 numlockx on &                                                               # Sets Numlock on
 feh --bg-scale /home/thedaemon/Pictures/Wallpapers/the_universe.png         # Wallpaper
 tint2 &                                                                     # Panel
 volumeicon &                                                                # Volume Control
-clipit &                                                                    # Tray Clipboard Manager
-xscreensaver -no-splash&                                                    # X-Screensaver
-
-#conky -d -c ~/.config/conky/conky.conf &                                   # Conky Information
+xscreensaver -no-splash&                                                    # Screensaver
 picom -b --experimental-backends &                                          # Compositor new options
+
+#clipit &                                                                    # Tray Clipboard Manager
 #picom -b &                                                                 # Compositor old options
 #plank &                                                                    # Dock
-#pcmanfm --desktop &                                                        # Desktop with Icons
+#pcmanfm --desktop &                                                        # Desktop with Iconsq

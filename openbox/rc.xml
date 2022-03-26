@@ -6,8 +6,7 @@
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
-    <!-- always try to focus new windows when they appear. other rules do
-       apply -->
+    <!-- always try to focus new windows when they appear. other rules do  apply -->
     <followMouse>no</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>yes</focusLast>
@@ -55,7 +54,7 @@
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Sans</name>
+      <name>Iosevka SS04</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Bold</weight>
@@ -64,7 +63,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Sans</name>
+      <name>Iosevka SS04 Medium</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -119,7 +118,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>2</number>
+    <number>3</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>one</name>
@@ -151,7 +150,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>24</top>
+    <top>4</top>
     <bottom>24</bottom>
     <left>24</left>
     <right>24</right>
@@ -176,7 +175,7 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Keybindings Custome -->
+    <!-- Keybindings Custom -->
     <keybind key="W-r">
       <action name="Reconfigure">
       </action>
@@ -262,11 +261,11 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="W-space">
+    <!--><keybind key="W-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
-    </keybind>
+    </keybind>-->
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
       <action name="NextWindow">
@@ -319,6 +318,7 @@
       </action>
     </keybind>
     <!--Keybindings for tiling -->
+    <!--Left Side of the Screen -->
     <keybind key="W-A-Left">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
@@ -328,6 +328,7 @@
         <height>100%</height>
       </action>
     </keybind>
+    <!--Right Side of the Screen-->
     <keybind key="W-A-Right">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
@@ -337,10 +338,14 @@
         <height>100%</height>
       </action>
     </keybind>
+    <!--Maximize -->
     <keybind key="W-A-Up">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <!-- Keybindings for running applications -->
+    <keybind key="W-A-Down">
+      <action name="Iconify"/>
+    </keybind>
+    <!--Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
@@ -836,6 +841,7 @@
     -->
     <!-- match all windows, and remove their decorations -->
     <application class="*">
+      <!--This hides the window decorations by default -->
       <decor>no</decor>
     </application>
   </applications>

@@ -56,35 +56,14 @@
 			<command>rofi -show run</command>
 		</action>
 	</item>
-	<item label="sakura">
-		<action name="Execute">
-			<command>sakura</command>
-		</action>
-	</item>
 </menu>
 <menu id="apps-editors-menu" label="Editors">
-	<item label="Code">
-		<action name="Execute">
-			<command>/usr/local/bin/code-oss --no-sandbox --unity-launch %F</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
 	<item label="DOOM Emacs">
 		<action name="Execute">
 			<command>emacs</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 				<wmclass>Emacs</wmclass>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="Godot">
-		<action name="Execute">
-			<command>godot-tools</command>
-			<startupnotify>
-				<enabled>yes</enabled>
 			</startupnotify>
 		</action>
 	</item>
@@ -123,34 +102,9 @@
 			<command>hexchat</command>
 		</action>
 	</item>
-	<item label="Midori">
-		<action name="Execute">
-			<command>midori</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-				<wmclass>Firefox</wmclass>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="Telegram">
-		<action name="Execute">
-			<command>telegram-desktop</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
 	<item label="Transmission">
 		<action name="Execute">
 			<command>transmission-gtk</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="Thunderbird">
-		<action name="Execute">
-			<command>thunderbird</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -161,14 +115,6 @@
 	<item label="Homura">
 		<action name="Execute">
 			<command>bash /usr/local/bin/Homura</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="Open Dungeons">
-		<action name="Execute">
-			<command>/usr/local/bin/opendungeons</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -192,7 +138,7 @@
 	</item>
 	<item label="Steam">
 		<action name="Execute">
-			<command>env WINEPREFIX=&quot;/usr/home/thedaemon/.local/share/Homura/Games/Steam&quot; wine C:\\windows\\command\\start.exe /Unix /usr/home/thedaemon/.local/share/Homura/Games/Steam/dosdevices/c:/users/thedaemon/Start\ Menu/Programs/Steam/Steam.lnk</command>
+			<command>env WINEPREFIX=&quot;/usr/home/thedaemon/.local/share/Homura/Games/Steam&quot; wine &quot;/usr/home/thedaemon/.local/share/Homura/Games/Steam/drive_c/Steam/steam.exe&quot;</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -226,7 +172,7 @@
 	</item>
 	<item label="ArtGem">
 		<action name="Execute">
-			<command>env WINEPREFIX="/usr/home/thedaemon/.local/share/Homura/Custom-Prefixes/ArtGem" wine C:\\windows\\command\\start.exe /Unix /usr/home/thedaemon/.local/share/Homura/Custom-Prefixes/ArtGem/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/ArtGem/ArtGem.lnk</command>
+			<command>wine /usr/home/thedaemon/Applications/Wine/ArtGem.exe</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -259,14 +205,6 @@
 	<item label="Krita">
 		<action name="Execute">
 			<command>krita</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="Wings3D">
-		<action name="Execute">
-			<command>wings</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -391,17 +329,17 @@
 		<action name="Execute">
 			<command>xscreensaver-demo</command>
 		</action>
-		</item>
+	</item>
 </menu>
 <menu id="shutdown-menu" label="Shutdown">
 	<item label="Reboot">
 		<action name="Execute">
-			<command>sudo /sbin/shutdown -r now</command>
+			<command>doas reboot</command>
 		</action>
 	</item>
 	<item label="Shutdown">
 		<action name="Execute">
-			<command>sudo /sbin/shutdown -h now</command>
+			<command>doas /sbin/shutdown -p now</command>
 		</action>
 	</item>
 </menu>
@@ -410,7 +348,7 @@
 	<separator label="GhostBSD"/>
 	<item label="PCMan FM">
 		<action name="Execute">
-			<command>xdg-open .</command>
+			<command>pcmanfm</command>
 			<startupnotify>
 				<enabled>yes</enabled>
 			</startupnotify>
@@ -424,26 +362,6 @@
 			</startupnotify>
 		</action>
 	</item>
-	<item label="Emacs">
-		<action name="Execute">
-			<command>emacs</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
-	</item>
-	<item label="NeoVim">
-		<action name="Execute"/>
-	</item>
-	<item label="Firefox">
-		<action name="Execute">
-			<command>xdg-open http://</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-				<wmclass>Firefox</wmclass>
-			</startupnotify>
-		</action>
-	</item>
 	<separator label="Menu"/>
 	<menu id="apps-accessories-menu"/>
 	<menu id="apps-editors-menu"/>
@@ -454,14 +372,6 @@
 	<separator label="System"/>
 	<item label="Reconfigure">
 		<action name="Reconfigure"/>
-	</item>
-	<item label="bpytop">
-		<action name="Execute">
-			<command>terminator -x bpytop</command>
-			<startupnotify>
-				<enabled>yes</enabled>
-			</startupnotify>
-		</action>
 	</item>
 	<menu id="system-menu"/>
 	<separator/>
