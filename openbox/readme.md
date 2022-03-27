@@ -1,1 +1,2 @@
-
+#OpenBox
+OpenBox config files
