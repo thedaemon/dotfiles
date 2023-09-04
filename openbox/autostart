@@ -1,13 +1,1 @@
-# OpenBOX AutoStart
-
-numlockx on &                                                               # Sets Numlock on
-feh --bg-scale /home/thedaemon/Pictures/Wallpapers/the_universe.png         # Wallpaper
-tint2 &                                                                     # Panel
-volumeicon &                                                                # Volume Control
-xscreensaver -no-splash&                                                    # Screensaver
-picom -b --experimental-backends &                                          # Compositor new options
-
-#clipit &                                                                    # Tray Clipboard Manager
-#picom -b &                                                                 # Compositor old options
-#plank &                                                                    # Dock
-#pcmanfm --desktop &                                                        # Desktop with Iconsq
+#moved everything to ~/.xinitrc because other WMs
