@@ -1,0 +1,59 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.7
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# thedaemon's commands
+
+## UTILITIES
+"rofi -show run"
+	Mod4 + s
+"xkill"
+	Mod4 + Delete
+"pcmanfm"
+	Mod4 + e
+
+## TERMINALS
+"9term -f"/usr/local/plan9/font/fixed/unicode.10x20.font" -W 800x400"
+	Mod4 + 9
+"terminator"
+	Mod4 + t
+"uxterm"
+	Mod4 + x
+
+## APPLICATIONS
+"/usr/local/bin/grafx2"
+	Mod4 + g
+"9 acme -f"/usr/local/plan9/font/fixed/unicode.10x20.font" -l ~/acme.dump &"
+	Mod4 + a
+"firefox"
+	Mod4 + f
+"9 winwatch -W 200x200 -f "/usr/local/plan9/font/fixed/unicode.10x20.font" -e "^(winwatch|stats|catclock)$" &"
+	Mod4 + 2
+"stats -W 200x200 -Cmle &"
+	Mod4 + 1
+##################################
+# End of xbindkeys configuration #
+##################################
