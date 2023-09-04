@@ -1,0 +1,11 @@
+snap 10
+bw 4
+fg DarkCyan
+bg DarkTurquoise
+mask1 control+mod4
+mask2 mod4
+term uxterm
+numvdesks 2
+bind button1=move
+bind button2=lower
+bind button3=resize
