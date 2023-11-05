@@ -11,4 +11,4 @@ feh
 xbindkey
 xinit
 
-Current as of FreeBSD 14-Current September 2023
+Current as of FreeBSD 14-Current November 2023
