@@ -1,0 +1,135 @@
+#- thedaemon's cwmrc
+#- -----------------
+
+#- REMOVE DEFAULT KEYBINDINGS
+unbind-key 				all
+unbind-mouse 			all
+
+#- SET THE DEFAULT TERMINAL
+command term 			"kitty"
+
+#- MECHANICS
+sticky no
+ignore bar
+ignore stats
+
+#- STYLE
+borderwidth 			4
+color activeborder 		"#55AAAA"
+color inactiveborder 	"#9EEEEE" 
+color font				"#000000"
+color selfont			"#9EEEEE"
+color groupborder		"#000099"
+color menubg			"#FBFBE7"
+color menufg			"#55AAAA"
+color urgencyborder		"#DD5257"
+color ungroupborder		"#990000"
+gap 					10 10 10 10
+snapdist 				4
+
+#- MENU
+command terminal		kitty
+command fm				pcmanfm
+command fm2				xfe
+command editor			"9 acme -f '/usr/local/plan9/font/kurinto/kurinto.18.mono.font'"
+command thenet			"links -g"
+command chat			hexchat
+command xkill			xkill
+
+# AUTOGROUPING
+#- FILING & TERMINAL
+autogroup 1				"kitty"
+autogroup 1				"terminator,Terminator"
+autogroup 1 			"pcmanfm,Pcmanfm"
+autogroup 1				"xfe,Xfe"
+#- EDITING
+autogroup 2 			"edwood"
+autogroup 2				"xed,Xed"
+autogroup 2				"acme"
+#- PAINTING
+autogroup 3 			"grafx2"
+autogroup 3 			"gimp,Gimp"
+autogroup 3				"paint"
+autogroup 3 			"krita"
+autogroup 3				"Blender"
+autogroup 3				"AzPainterB"
+autogroup 3				"AzPainter"
+#- INTERNETS
+autogroup 4 			"Links"
+autogroup 4 			"Navigator,firefox"
+autogroup 4				"surf,Surf"
+#- READING & LISTENING
+autogroup 5				"MComix"
+autogroup 5				"YACReaderLibrary"
+autogroup 5				"YACReader"
+autogroup 5				"deadbeef,Deadbeef"
+#- UTILITIES
+autogroup 6				"qbittorrent,qBittorrent"
+autogroup 6				"keepassxc,KeePassXC"
+autogroup 6				"AnyDesk"
+#- CHAT
+autogroup 7 			"hexchat,Hexchat"
+#- PLAN 9
+autogroup 9 			"drawterm,Drawterm"
+
+#- MOUSE
+bind-mouse 4-1			window-move
+bind-mouse 4-2			window-lower
+bind-mouse 4-3			window-resize
+bind-mouse 1			menu-window
+bind-mouse 2			menu-group
+bind-mouse 3			menu-cmd
+
+#- KEYBOARD
+bind-key 4-Return		terminal
+bind-key C4-r			restart
+bind-key C4-q			quit
+
+#- WINDOW
+bind-key 4-q			window-close
+bind-key 4-f			window-maximize
+bind-key C4-f			window-fullscreen
+bind-key 4-s			window-stick
+bind-key 4-h			window-hide
+bind-key 4-equal		window-vmaximize
+bind-key S4-equal		window-hmaximize
+bind-key 4-n			window-menu-label
+bind-key 4-l			window-freeze
+bind-key 4-Tab			window-cycle-ingroup
+bind-key 4S-Tab			window-rcycle-ingroup
+
+#- GROUP
+bind-key 4-g			window-group
+bind-key C4-a			group-toggle-all
+bind-key 4-Right		group-cycle
+bind-key 4-Left			group-rcycle
+
+#- GROUP NUMBER
+bind-key 4-1 			group-toggle-1
+bind-key 4-2 			group-toggle-2
+bind-key 4-3 			group-toggle-3
+bind-key 4-4 			group-toggle-4
+bind-key 4-5 			group-toggle-5
+bind-key 4-6 			group-toggle-6
+bind-key 4-7 			group-toggle-7
+bind-key 4-8 			group-toggle-8
+bind-key 4-9 			group-toggle-9
+bind-key C4-1 			group-only-1
+bind-key C4-2 			group-only-2
+bind-key C4-3 			group-only-3
+bind-key C4-4 			group-only-4
+bind-key C4-5 			group-only-5
+bind-key C4-6 			group-only-6
+bind-key C4-7 			group-only-7
+bind-key C4-8 			group-only-8
+bind-key C4-9 			group-only-9
+bind-key 4S-1			window-movetogroup-1
+bind-key 4S-2			window-movetogroup-2
+bind-key 4S-3			window-movetogroup-3
+bind-key 4S-4			window-movetogroup-4
+bind-key 4S-5			window-movetogroup-5
+bind-key 4S-6			window-movetogroup-6
+bind-key 4S-7			window-movetogroup-7
+bind-key 4S-8			window-movetogroup-8
+bind-key 4S-9			window-movetogroup-9
+
