@@ -13,7 +13,7 @@ fi
 # Basic setup
 #--------------------#
 
-export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/plan9/bin:/usr/local/libexec/ccache:$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/local/plan9/bin:/usr/local/libexec/ccache:$HOME/.local/bin:$HOME/bin:/usr/local/nim/bin:$PATH
 export PLAN9=/usr/local/plan9
 export font=/usr/local/plan9/font/kurinto/kurinto.18.mono.font
 export CCACHE_PATH=/usr/bin:/usr/local/bin
@@ -37,13 +37,11 @@ shopt -s histappend
 # color chart black 30,red 31, green 32, brown 33, blue 34, purple 35, cyan 36
 # \W is current directory
 # \h is host name
-#PS1="( \e[1;31m😈\h \e[m\e[0;35m\W\e[m ) "
-#PS1="⋐ \h ∙\e[m\e[0;36m \W\e[m ⋑ "
-PS1=" \h ∙\e[m\e[0;36m \W\e[m "
+#PS1=" \h ∙\e[m\e[0;36m \W\e[m "
 
 # Black and White, useful for plan9ports
 # I use this mainly for simplicities sake
-#PS1=" \h ∙ \W "
+PS1=" \h ∙ \W "
 
 # changes pager to a colorful one
 PAGER=most export PAGER
